@@ -19,3 +19,23 @@ h1 {
   font-family: 'Major Mono Display', monospace;
   padding-top: 6%;
 }
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.green {
+  color: green;
+}
+
+.book {
+  font-size: 30px;
+}

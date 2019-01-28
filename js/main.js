@@ -5,6 +5,7 @@ const results = document.getElementById('results');
 
 // event listeners
 search.addEventListener('keyup', searchOnEnter);
+button.addEventListener('click', bookSearch);
 
 // functions
 function searchOnEnter(event) {
@@ -13,3 +14,7 @@ function searchOnEnter(event) {
     button.click();
   }
 };
+
+function bookSearch() {
+  console.log('main.js is working!');
+}

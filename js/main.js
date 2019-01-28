@@ -29,10 +29,13 @@ function callAPI() {
     success: function (data) {
       for (i = 0; i < data.items.length; i++) {
         let dataResults = data.items[i].volumeInfo;
+        if (dataResults.publisher === undefined) {
+          dataResults.publisher = 'No info';
+        }
         results.innerHTML +=
           `<li><a href="${dataResults.infoLink}"><img src="${dataResults.imageLinks.thumbnail}"></a></li>
           <li><a href="${dataResults.infoLink}"><h3>${dataResults.title}</h3></a></li>
-          <li>by ${dataResults.authors}</li>
+          <li>by ${dataResults.authors.toString().replace(/,/g, ', ')}</li>
           <li>Publisher: ${dataResults.publisher}</li>
           <li class="read-more"><a href="${dataResults.infoLink}">READ MORE 📖</a></li>`
       }

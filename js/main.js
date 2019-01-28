@@ -27,7 +27,15 @@ function callAPI() {
     dataType: 'json',
 
     success: function (data) {
-      console.log(data)
+      for (i = 0; i < data.items.length; i++) {
+        let dataResults = data.items[i].volumeInfo;
+        results.innerHTML +=
+          `<li><a href="${dataResults.infoLink}"><img src="${dataResults.imageLinks.thumbnail}"></a></li>
+          <li><a href="${dataResults.infoLink}"><h3>${dataResults.title}</h3></a></li>
+          <li>by ${dataResults.authors}</li>
+          <li>Publisher: ${dataResults.publisher}</li>
+          <li class="read-more"><a href="${dataResults.infoLink}">READ MORE 📖</a></li>`
+      }
     },
 
     type: 'GET'

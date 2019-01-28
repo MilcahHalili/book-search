@@ -18,5 +18,18 @@ function searchOnEnter(event) {
 function bookSearch() {
   search.value;
   results.innerHTML = '';
-  console.log(search.value);
+  callAPI();
+}
+
+function callAPI() {
+  $.ajax({
+    url: 'https://www.googleapis.com/books/v1/volumes?q=' + search.value,
+    dataType: 'json',
+
+    success: function (data) {
+      console.log(data)
+    },
+
+    type: 'GET'
+  });
 }

@@ -21,6 +21,7 @@ Book Search is a web app that uses Google Books API to:
 * HTML
 * CSS
 * JavaScript
+* Surge
 
 ## Getting Started
 

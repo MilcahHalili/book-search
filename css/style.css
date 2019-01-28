@@ -39,3 +39,17 @@ h1 {
 .book {
   font-size: 30px;
 }
+
+input {
+  width: 33%;
+  background-color: #F0ECC2;
+  border-radius: 16px;
+  padding: 8px 10px 8px 10px;
+  font-size: 16px;
+  margin: 0 0 40px 0;
+  outline-width: 0;
+}
+
+button {
+  display: none;
+}

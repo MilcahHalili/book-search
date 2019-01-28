@@ -16,5 +16,7 @@ function searchOnEnter(event) {
 };
 
 function bookSearch() {
-  console.log('main.js is working!');
+  search.value;
+  results.innerHTML = '';
+  console.log(search.value);
 }

@@ -8,3 +8,14 @@ a {
   font-weight: 900;
   color: #000;
 }
+
+h1, #search-section, button {
+  text-align: center;
+  margin: 40px 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: 'Major Mono Display', monospace;
+  padding-top: 6%;
+}

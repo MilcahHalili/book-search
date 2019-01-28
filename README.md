@@ -24,7 +24,7 @@ Book Search is a web app that uses Google Books API to:
 
 ## Getting Started
 
-Go to [Book Search] (https://gbook-search-app.herokuapp.com/)
+Go to [Book Search] (http://polite-hose.surge.sh/)
 
 ## Next Steps
 

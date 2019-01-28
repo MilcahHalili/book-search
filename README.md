@@ -1,6 +1,6 @@
 # Book Search
 
-![Book Search Screenshot](https://i.imgur.com/rUJpbLB.png "Book Search Screenshot")
+![Book Search Screenshot](https://i.imgur.com/zR4VzZY.png "Book Search Screenshot")
 
 ## Description
 
@@ -24,7 +24,7 @@ Book Search is a web app that uses Google Books API to:
 
 ## Getting Started
 
-Go to [Book Search] (https://app-name.herokuapp.com/).
+Go to [Book Search] (https://gbook-search-app.herokuapp.com/)
 
 ## Next Steps
 

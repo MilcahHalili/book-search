@@ -43,9 +43,7 @@ Knowledge of:
 #### Installing
 
 1. Open Terminal.
-2. Type `mkdir` followed by a space and your folder name to create a folder where your copy of Book Search will live. For example:
-
-`mkdir folder-name`
+2. Type `mkdir` followed by a space and your folder name to create a folder where your copy of Book Search will live. For example: `mkdir folder-name`
 3. `cd` into the directory you created.
 4. Clone a copy of this repo into your newly created folder. If you are unfamiliar with how to clone a repo on Github, then please refer to [this link](https://help.github.com/articles/cloning-a-repository/) for further instructions.
 

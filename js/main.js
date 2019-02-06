@@ -25,32 +25,33 @@ function callAPI() {
   $.ajax({
     url: 'https://www.googleapis.com/books/v1/volumes?q=' + search.value,
     dataType: 'json',
-
-    success: function (data) {
-      if (data.items === undefined) {
-        search.style.borderColor = 'orangered';
-        search.value = 'Try again! :D';
-      } else {
-        search.style.borderColor = '';
-        for (i = 0; i < data.items.length; i++) {
-          let dataResults = data.items[i].volumeInfo;
-          if (dataResults.authors === undefined && dataResults.thumbnail === undefined) {
-            return;
-          }
-          if (dataResults.publisher === undefined) {
-            dataResults.publisher = 'No info';
-          }
-          results.innerHTML +=
-          `<li><a href="${dataResults.infoLink}"><img src="${dataResults.imageLinks.thumbnail}"></a></li>
-          <li><a href="${dataResults.infoLink}"><h3>${dataResults.title}</h3></a></li>
-          <li>by ${dataResults.authors.toString().replace(/,/g, ', ')}</li>
-          <li>Publisher: ${dataResults.publisher}</li>
-          <li class="read-more"><a href="${dataResults.infoLink}">READ MORE 📖</a></li>`
-        }
-      }
-      console.log(data);
-    },
-
     type: 'GET'
+  }).done(function (data) {
+    if (data.items === undefined) {
+      search.style.borderColor = 'orangered';
+      search.value = 'Try again! :D';
+    } else {
+      search.style.borderColor = '';
+      for (i = 0; i < data.items.length; i++) {
+        let dataResults = data.items[i].volumeInfo;
+        let img = dataResults.imageLinks.thumbnail;
+        let title = dataResults.title;
+        let authors = dataResults.authors;
+        let publisher = dataResults.publisher;
+        let url = dataResults.infoLink;
+        if (authors === undefined && img === undefined) {
+          return;
+        }
+        if (publisher === undefined) {
+          publisher = 'No info';
+        }
+        results.innerHTML +=
+          `<li><a href="${url}"><img src="${img}"></a></li>
+          <li><a href="${url}"><h3>${title}</h3></a></li>
+          <li>by ${authors.toString().replace(/,/g, ', ')}</li>
+          <li>Publisher: ${publisher}</li>
+          <li class="read-more"><a href="${url}">READ MORE 📖</a></li>`
+      }
+    }
   });
 }

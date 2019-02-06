@@ -28,8 +28,10 @@ function callAPI() {
 
     success: function (data) {
       if (data.items === undefined) {
-        return;
+        search.style.borderColor = 'orangered';
+        search.value = 'Try again! :D';
       } else {
+        search.style.borderColor = '';
         for (i = 0; i < data.items.length; i++) {
           let dataResults = data.items[i].volumeInfo;
           if (dataResults.authors === undefined && dataResults.thumbnail === undefined) {

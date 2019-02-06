@@ -29,6 +29,9 @@ function callAPI() {
     success: function (data) {
       for (i = 0; i < data.items.length; i++) {
         let dataResults = data.items[i].volumeInfo;
+        if (dataResults.authors === undefined) {
+          return;
+        }
         if (dataResults.publisher === undefined) {
           dataResults.publisher = 'No info';
         }
@@ -39,6 +42,7 @@ function callAPI() {
           <li>Publisher: ${dataResults.publisher}</li>
           <li class="read-more"><a href="${dataResults.infoLink}">READ MORE 📖</a></li>`
       }
+      console.log(data);
     },
 
     type: 'GET'

@@ -29,7 +29,7 @@ Book Search is a web app that uses Google Books API to:
 
 ### The Deployed App
 
-Go to [Book Search](http://polite-hose.surge.sh/) to view the web app.
+Go to [Book Search](http://defiant-shade.surge.sh/) to view the web app.
 
 ### Running the App Locally
 
